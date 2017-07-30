@@ -9,8 +9,7 @@
  */
 export class Item {
 
-  constructor(private fields: any) {
-    // Quick and dirty extend/assign fields to this model
+  constructor(private fields: any) {    
     for (let f in fields) {
       this[f] = fields[f];
     }
