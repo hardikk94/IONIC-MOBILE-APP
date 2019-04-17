@@ -13,17 +13,17 @@ import { UserOptions } from '../../interfaces/user-options';
   templateUrl: 'login.html',
   styleUrls: ['./login.scss'],
 })
-export class LoginPage {  
-  submitted = false;  
+export class LoginPage {
+  submitted = false;
   public backgroundImage = 'assets/img/background-5.jpg';
   constructor(
     public userData: UserData,
     public router: Router
   ) { }
 
-  login(form: NgForm) {    
-      this.router.navigateByUrl('/app/tabs/schedule');
-    }
+  login(form: NgForm) {
+    this.router.navigateByUrl('/app/tabs/schedule');
+  }
 
   goToSignup() {
     this.router.navigateByUrl('/signup');

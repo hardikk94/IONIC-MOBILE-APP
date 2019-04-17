@@ -20,13 +20,13 @@ export class SignupPage {
   constructor(
     public router: Router,
     public userData: UserData
-  ) {}
+  ) { }
 
-  login(form: NgForm) {    
+  login(form: NgForm) {
     this.router.navigateByUrl('/app/tabs/schedule');
   }
 
-goToSignup() {
-  this.router.navigateByUrl('/signup');
-}
+  goToSignup() {
+    this.router.navigateByUrl('/signup');
+  }
 }

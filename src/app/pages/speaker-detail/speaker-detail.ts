@@ -48,18 +48,18 @@ export class SpeakerDetailPage {
   constructor() { }
 
   ionViewDidLoad() {
-    
+
   }
 
   imageTapped(post) {
-    
+
   }
 
   comment(post) {
-    
+
   }
 
   like(post) {
-    
+
   }
 }
