@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Rewards</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="outer-content">
+  <div class="pins">
+    <ion-card class="pin" *ngFor="let post of posts" routerLink="/app/tabs/realstate/view/{{post.id}}">
+      <img [src]="post.image" />
+      <div *ngIf="post.description" class="post-description">
+        <small><b>{{ post.location }}</b></small><br />
+        <small>{{ post.description }}</small>        
+      </div>
+      <ion-item>
+        <ion-avatar item-start *ngIf="post.booked">
+          <img src="assets/img/marty-avatar.png">
+        </ion-avatar>
+        <small>{{post.booked ? 'Booked' : 'Open'}}</small>        
+      </ion-item>
+    </ion-card>
+  </div>
+</ion-content>

@@ -58,6 +58,19 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'realstate',
+        children: [
+          {
+            path: '',
+            loadChildren: '../real-state-list/real-state-list.module#RealStateListPageModule'
+          },
+          {
+            path: 'view/:id',
+            loadChildren: '../realstate-detail/realstate-detail.module#RealstateDetailPageModule'
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/app/tabs/schedule',
         pathMatch: 'full'
