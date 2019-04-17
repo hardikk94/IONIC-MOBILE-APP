@@ -26,6 +26,11 @@ export class AppComponent implements OnInit {
       icon: 'ribbon'
     },
     {
+      title: 'Real State',
+      url: '/app/tabs/realstate',
+      icon: 'briefcase'
+    },
+    {
       title: 'Virtual 3D',
       url: '/app/tabs/map',
       icon: 'map'
@@ -34,12 +39,7 @@ export class AppComponent implements OnInit {
       title: 'About',
       url: '/app/tabs/about',
       icon: 'information-circle'
-    },
-    {
-      title: 'Real State',
-      url: '/app/tabs/realstate',
-      icon: 'briefcase'
-    }
+    }    
   ];
   loggedIn = false;
 

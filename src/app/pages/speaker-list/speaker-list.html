@@ -11,7 +11,7 @@
   <ion-list>
     <ion-grid fixed>
       <ion-row align-items-stretch>
-        <ion-col size="12" size-md="6" *ngFor="let speaker of speakers">
+        <ion-col size="12" size-md="6" *ngFor="let speaker of speakers" routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
           <ion-card class="speaker-card">
             <img [src]="speaker.profilePic" alt="Speaker profile pic">           
 
@@ -20,7 +20,7 @@
                 <span class="title">{{speaker.name}}</span>
               </ion-card-title>
               <ion-list>
-                <ion-item routerLink="/app/tabs/speakers/speaker-details/{{speaker.id}}">
+                <ion-item>
                   <h3>View {{speaker.name}} Reward Points</h3>
                 </ion-item>
               </ion-list>
