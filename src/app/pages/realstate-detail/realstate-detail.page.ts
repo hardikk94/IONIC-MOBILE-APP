@@ -31,14 +31,14 @@ export class RealstateDetailPage implements OnInit {
         title: 'Beautiful Garden'
       }
     ]
-  }
+  };
   constructor() { }
 
   ngOnInit() {
   }
 
   ionViewDidEnter() {
-    this.defaultHref = `/app/tabs/realstate`
+    this.defaultHref = `/app/tabs/realstate`;
   }
 
 }
