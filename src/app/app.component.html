@@ -1,14 +1,20 @@
 <ion-app>
   <ion-split-pane>
 
-    <ion-menu>
+    <ion-menu id="menu-material">
       <ion-header>
         <ion-toolbar>
           <ion-title>Menu</ion-title>
         </ion-toolbar>
       </ion-header>
       <ion-content>
-
+        <div class="menu-header">
+          <!--material-design-background-->
+          <img class="user-avatar round" [src]="chosenPicture || placeholder" onerror="this.src='assets/img/marty-avatar.png'"
+          />
+          <p class="name">Jignesh Shah</p>
+          <p class="e-mail">jignesh@email.com</p>
+        </div>
         <ion-list>
           <ion-list-header>
             Navigate
@@ -101,6 +107,12 @@
               <ion-label>Help</ion-label>
             </ion-item>
           </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+              <ion-item button>
+                <ion-icon slot="start" name="information-circle"></ion-icon>
+                <ion-label>1.0.0 Beta</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
         </ion-list>
       </ion-content>
     </ion-menu>

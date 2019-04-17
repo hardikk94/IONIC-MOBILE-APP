@@ -22,12 +22,11 @@ export class SignupPage {
     public userData: UserData
   ) {}
 
-  onSignup(form: NgForm) {
-    this.submitted = true;
-
-    if (form.valid) {
-      this.userData.signup(this.signup.username);
-      this.router.navigateByUrl('/app/tabs/schedule');
-    }
+  login(form: NgForm) {    
+    this.router.navigateByUrl('/app/tabs/schedule');
   }
+
+goToSignup() {
+  this.router.navigateByUrl('/signup');
+}
 }

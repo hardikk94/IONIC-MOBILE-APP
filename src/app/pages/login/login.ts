@@ -13,25 +13,19 @@ import { UserOptions } from '../../interfaces/user-options';
   templateUrl: 'login.html',
   styleUrls: ['./login.scss'],
 })
-export class LoginPage {
-  login: UserOptions = { username: '', password: '' };
-  submitted = false;
-
+export class LoginPage {  
+  submitted = false;  
+  public backgroundImage = 'assets/img/background-5.jpg';
   constructor(
     public userData: UserData,
     public router: Router
   ) { }
 
-  onLogin(form: NgForm) {
-    this.submitted = true;
-
-    if (form.valid) {
-      this.userData.login(this.login.username);
+  login(form: NgForm) {    
       this.router.navigateByUrl('/app/tabs/schedule');
     }
-  }
 
-  onSignup() {
+  goToSignup() {
     this.router.navigateByUrl('/signup');
   }
 }

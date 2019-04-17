@@ -18,15 +18,15 @@ export class AppComponent implements OnInit {
     {
       title: 'Securites',
       url: '/app/tabs/schedule',
-      icon: 'calendar'
+      icon: 'logo-freebsd-devil'
     },
     {
-      title: 'Speakers',
+      title: 'Rewards',
       url: '/app/tabs/speakers',
-      icon: 'contacts'
+      icon: 'ribbon'
     },
     {
-      title: 'Map',
+      title: 'Virtual 3D',
       url: '/app/tabs/map',
       icon: 'map'
     },
