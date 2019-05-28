@@ -22,7 +22,7 @@ export class SchedulePage implements OnInit {
   shownSessions: any = [];
   groups: any = [];
   confDate: string;
-
+  public scheduleData
   constructor(
     public alertCtrl: AlertController,
     public confData: ConferenceData,
@@ -39,12 +39,19 @@ export class SchedulePage implements OnInit {
   }
 
   updateSchedule() {
-    // Close any open sliding items when the schedule updates
     if (this.scheduleList) {
       this.scheduleList.closeSlidingItems();
     }
-
-    this.confData.getTimeline(this.dayIndex, this.queryText, this.excludeTracks, this.segment).subscribe((data: any) => {
+    let day = 0;
+    if (this.segment == 'today') {
+      day = 0
+    }
+    else {
+      day = 1
+    }
+    // Close any open sliding items when the schedule updates
+    this.confData.getTimeline(day, this.queryText, this.excludeTracks, this.segment).subscribe((data: any) => {
+      this.scheduleData = data
       this.shownSessions = data.shownSessions;
       this.groups = data.groups;
     });

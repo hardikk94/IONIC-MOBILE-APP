@@ -4,12 +4,12 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
 
-    <ion-segment [(ngModel)]="segment" (ionChange)="updateSchedule()">
-      <ion-segment-button value="all">
-        All
+    <ion-segment [(ngModel)]="segment" (ionChange)="updateSchedule(e)">
+      <ion-segment-button value="today">
+        Today
       </ion-segment-button>
-      <ion-segment-button value="favorites">
-        Favorites
+      <ion-segment-button value="next">
+        Next
       </ion-segment-button>
     </ion-segment>
 
@@ -29,7 +29,7 @@
     <ion-item-group *ngFor="let group of groups" [hidden]="group.hide">
       <ion-item-divider sticky>
         <ion-label>
-          {{group.time}}
+          {{scheduleData.date | date}} {{group.time}}
         </ion-label>
       </ion-item-divider>
 

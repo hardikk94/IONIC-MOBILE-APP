@@ -1,7 +1,63 @@
 {
-  "schedule": [
+  "appointments": [
     {
-      "date": "2047-05-17",
+      "date": "2019-06-05",
+      "groups": [
+        {
+          "time": "8:00 am",
+          "sessions": [
+            {
+              "name": "Karan shah",
+              "location": "Ahmedabad",
+              "timeStart": "8:00 am",
+              "description": "Appendix",
+              "timeEnd": "10:00 am",
+              "toMeet": "Dr. khimeshra",
+              "tracks": [
+                "Appendix"
+              ],
+              "id": "1"
+            }
+          ]
+        },
+        {
+          "time": "10:00 am",
+          "sessions": [
+            {
+              "name": "Hardik Kothari",
+              "location": "Ahmedabad",
+              "description": "Heart",
+              "toMeet": "Dr Dixit",
+              "timeStart": "10:00 am",
+              "timeEnd": "11:45 am",
+              "tracks": [
+                "Heart"
+              ],
+              "id": "2"
+            }
+          ]
+        },
+        {
+          "time": "04:00 pm",
+          "sessions": [
+            {
+              "name": "Sumit Heda",
+              "location": "Ahmedabad",
+              "description": "jaundice",
+              "timeStart": "04:00 pm",
+              "timeEnd": "04:20 pm",
+              "toMeet": "Dr karan shah",
+              "tracks": [
+                "jaundice"
+              ],
+              "id": "12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2019-06-12",
       "groups": [
         {
           "time": "8:00 am",
@@ -11,9 +67,11 @@
               "timeStart": "8:00 am",
               "description": "Comming for meeting with Hardik shah and maulik Shah ",
               "timeEnd": "10:00 am",
-              "toMeet":"Devang shah,Kiran shah",
+              "toMeet": "Devang shah,Kiran shah",
               "location": "304,Platinum Heights",
-              "tracks": ["Relatives"],
+              "tracks": [
+                "Relatives"
+              ],
               "id": "1"
             }
           ]
@@ -25,67 +83,17 @@
               "name": "Hardik Kothari",
               "location": "101,Sahi Kutir",
               "description": "For reparing and service of AC",
-              "speakerNames": ["Ted Turtle"],
-              "toMeet":"Karan shah,Asha shah",
+              "speakerNames": [
+                "Ted Turtle"
+              ],
+              "toMeet": "Karan shah,Asha shah",
               "timeStart": "10:00 am",
               "timeEnd": "11:45 am",
-              "tracks": ["Ac Repairing"],
+              "tracks": [
+                "Ac Repairing"
+              ],
               "id": "2"
-            }           
-          ]
-        },
-        {
-          "time": "12:00 am",
-          "sessions": [
-            {
-              "name": "Haresh Prajapati",
-              "location": "101,Sheetalnath appartment",
-              "description": "Car and bike services",
-              "speakerNames": ["Eva Eagle", "Lionel Lion"],
-              "timeStart": "12:00 am",
-              "timeEnd": "03:00 pm",
-              "toMeet":"Siddharth patel",
-              "tracks": ["Car Service"],
-              "id": "5"
-            },
-            {
-              "name": "Aakash Prajapati",
-              "location": "103,Sheetalnath appartment",
-              "description": "Bike service",
-              "speakerNames": ["Rachel Rabbit"],
-              "timeStart": "12:15 pm",
-              "toMeet":"Vishal patel",
-              "timeEnd": "12:45 pm",
-              "tracks": ["Bike service"],
-              "id": "6"
-            }           
-          ]
-        },
-        {
-          "time": "2:00 pm",
-          "sessions": [
-            {
-              "name": "Keshav bhai",
-              "location": "103,Sheetalnath appartment",
-              "description": "Aloo, tamatar gobi",
-              "speakerNames": ["Karl Kitten", "Lionel Lion"],
-              "timeStart": "02:00 pm",
-              "timeEnd": "04:00 pm",
-              "toMeet":"Vishal patel",
-              "tracks": ["Sabjiwala"],
-              "id": "9"
-            },
-            {
-              "name": "Kanta Bai",
-              "location": "Hall 3",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Lionel Lion", "Gino Giraffe"],
-              "timeStart": "02:00 am",
-              "timeEnd": "04:00 pm",
-              "toMeet":"Vishal patel",
-              "tracks": ["Kaamwali bai"],
-              "id": "10"
-            }           
+            }
           ]
         },
         {
@@ -97,44 +105,18 @@
               "description": "For dilivery of foods",
               "timeStart": "04:00 pm",
               "timeEnd": "04:20 pm",
-              "toMeet":"Hardik Kothari",
-              "tracks": ["Swiggy"],
+              "toMeet": "Hardik Kothari",
+              "tracks": [
+                "Swiggy"
+              ],
               "id": "12"
-            }
-          ]
-        },        
-        {
-          "time": "5:00",
-          "sessions": [
-            {
-              "name": "Press wala Bharat bhai",
-              "location": "Hall 1",
-              "description": "Press k kapde lene k liye.",
-              "speakerNames": ["Ted Turtle"],
-              "timeStart": "5:00 pm",
-              "timeEnd": "05:30 pm",
-              "toMeet":"Hardik Kothari",
-              "tracks": ["Bharat Press"],
-              "id": "19"
-            },
-            {
-              "name": "Hardik Patel",
-              "location": "Hall 2",
-              "description": "kapde wash k ly",
-              "speakerNames": ["Rachel Rabbit"],
-              "timeStart": "5:30 pm",
-              "toMeet":"Hardik Kothari",
-              "timeEnd": "6:45 pm",
-              "tracks": ["Mobile repairing"],
-              "id": "20"
             }
           ]
         }
       ]
     }
   ],
-
-  "speakers": [
+  "inventories": [
     {
       "name": "Movies",
       "profilePic": "/assets/img/movies.jpeg",
@@ -184,9 +166,14 @@
       "email": "eva@example.com",
       "phone": "+1-541-754-3010",
       "id": "4"
-    }    
+    }
   ],
-
+  "users": [
+    {}
+  ],
+  "patients": [
+    {}
+  ],
   "map": [
     {
       "name": "Monona Terrace Convention Center",
@@ -205,4 +192,5 @@
       "lng": -89.38335
     }
   ]
+
 }

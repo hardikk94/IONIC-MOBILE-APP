@@ -16,22 +16,22 @@ import { UserData } from './providers/user-data';
 export class AppComponent implements OnInit {
   appPages = [
     {
-      title: 'Securites',
-      url: '/app/tabs/schedule',
-      icon: 'logo-freebsd-devil'
-    },
-    {
-      title: 'Rewards',
-      url: '/app/tabs/speakers',
-      icon: 'ribbon'
-    },
-    {
-      title: 'Real State',
+      title: 'Patients',
       url: '/app/tabs/realstate',
       icon: 'briefcase'
     },
     {
-      title: 'Virtual 3D',
+      title: 'Appointments',
+      url: '/app/tabs/schedule',
+      icon: 'logo-freebsd-devil'
+    },
+    {
+      title: 'Inventory',
+      url: '/app/tabs/speakers',
+      icon: 'ribbon'
+    },
+    {
+      title: 'Graph',
       url: '/app/tabs/map',
       icon: 'map'
     },
@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {
       title: 'About',
       url: '/app/tabs/about',
       icon: 'information-circle'
-    }    
+    }
   ];
   loggedIn = false;
 
