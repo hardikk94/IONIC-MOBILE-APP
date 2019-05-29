@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, filter } from 'rxjs/operators';
 
 import { UserData } from './user-data';
 
@@ -11,7 +11,7 @@ import { UserData } from './user-data';
 export class ConferenceData {
   data: any;
 
-  constructor(public http: HttpClient, public user: UserData) {}
+  constructor(public http: HttpClient, public user: UserData) { }
 
   load(): any {
     if (this.data) {
@@ -39,7 +39,7 @@ export class ConferenceData {
     segment = 'all'
   ) {
     return this.load().pipe(
-      map((data: any) => {               
+      map((data: any) => {
         const day = data.appointments[dayIndex];
         day.shownSessions = 0;
         queryText = queryText.toLowerCase().replace(/,|\.|-/g, ' ');
@@ -131,6 +131,14 @@ export class ConferenceData {
     return this.load().pipe(
       map((data: any) => {
         return data.map;
+      })
+    );
+  }
+
+  getpatientList() {
+    return this.load().pipe(
+      map((data: any) => {        
+        return data.users;
       })
     );
   }

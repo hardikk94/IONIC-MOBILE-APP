@@ -7,14 +7,14 @@
         </ion-toolbar>
       </ion-header>
       <ion-content>
-        <div class="menu-header">
+        <div class="menu-header" *ngIf="loggedIn">
           <!--material-design-background-->
-          <img class="user-avatar round" [src]="chosenPicture || placeholder" onerror="this.src='assets/img/marty-avatar.png'"
-          />
-          <p class="name">Jignesh Shah</p>
-          <p class="e-mail">jignesh@email.com</p>
+          <img class="user-avatar round" [src]="chosenPicture || placeholder"
+            onerror="this.src='assets/img/marty-avatar.png'" />
+          <p class="name">{{userDetail?.name}}</p>
+          <p class="e-mail">{{userDetail?.email}}</p>
         </div>
-        <ion-list>
+        <ion-list *ngIf="loggedIn">
           <ion-list-header>
             Navigate
           </ion-list-header>
@@ -25,7 +25,6 @@
                 {{p.title}}
               </ion-label>
             </ion-item>
-
           </ion-menu-toggle>
         </ion-list>
 
@@ -78,19 +77,19 @@
           </ion-menu-toggle>
 
           <ion-menu-toggle auto-hide="false">
-            <ion-item routerLink="/support">
-              <ion-icon slot="start" name="help"></ion-icon>
+            <ion-item routerLink="/signup">
+              <ion-icon slot="start" name="person-add"></ion-icon>
               <ion-label>
-                Support
+                Signup
               </ion-label>
             </ion-item>
           </ion-menu-toggle>
 
           <ion-menu-toggle auto-hide="false">
-            <ion-item routerLink="/signup">
-              <ion-icon slot="start" name="person-add"></ion-icon>
+            <ion-item routerLink="/support">
+              <ion-icon slot="start" name="help"></ion-icon>
               <ion-label>
-                Signup
+                Support
               </ion-label>
             </ion-item>
           </ion-menu-toggle>
@@ -103,20 +102,25 @@
           <ion-menu-toggle auto-hide="false">
             <ion-item button (click)="openTutorial()">
               <ion-icon slot="start" name="hammer"></ion-icon>
-              <ion-label>Help</ion-label>
+              <ion-label>Tutorial</ion-label>
             </ion-item>
           </ion-menu-toggle>
           <ion-menu-toggle auto-hide="false">
-              <ion-item button>
-                <ion-icon slot="start" name="information-circle"></ion-icon>
-                <ion-label>1.0.0 Beta</ion-label>
-              </ion-item>
-            </ion-menu-toggle>
+            <ion-item button (click)="openAbout()">
+              <ion-icon slot="start" name="information-circle"></ion-icon>
+              <ion-label>About</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-item>
+            <ion-icon slot="start" name="logo-android"></ion-icon>
+            <ion-label>1.0.0 Beta</ion-label>
+          </ion-item>
+
         </ion-list>
       </ion-content>
     </ion-menu>
 
-    <ion-router-outlet main ></ion-router-outlet>
+    <ion-router-outlet main></ion-router-outlet>
 
   </ion-split-pane>
 

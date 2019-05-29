@@ -169,10 +169,30 @@
     }
   ],
   "users": [
-    {}
-  ],
-  "patients": [
-    {}
+    {
+      "name": "Hardik Kothari",      
+      "email": "hardikkothari46@gmail.com",
+      "image": "",
+      "type": "patient"
+    },
+    {
+      "name": "Dr. Jainesh Shah",
+      "email": "jaineshshah@gmaillcom",
+      "image": "",
+      "type": "Doctor"
+    },
+    {
+      "name": "Sumit shah",
+      "email": "sumit@gmaillcom",
+      "image": "",
+      "type": "patient"
+    },
+    {
+      "name": "Kiran Kothari",
+      "email": "kirank@gmaillcom",
+      "image": "",
+      "type": "patient"
+    }
   ],
   "map": [
     {
@@ -192,5 +212,4 @@
       "lng": -89.38335
     }
   ]
-
 }

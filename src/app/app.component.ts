@@ -4,7 +4,6 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Events, MenuController, Platform } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
-
 import { UserData } from './providers/user-data';
 
 @Component({
@@ -35,12 +34,8 @@ export class AppComponent implements OnInit {
       url: '/app/tabs/map',
       icon: 'map'
     },
-    {
-      title: 'About',
-      url: '/app/tabs/about',
-      icon: 'information-circle'
-    }
   ];
+  userDetail: any
   loggedIn = false;
 
   constructor(
@@ -65,6 +60,9 @@ export class AppComponent implements OnInit {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      this.userData.getLoggedUserData().then((useradata) => {
+        this.userDetail = useradata
+      })
     });
   }
 
@@ -82,6 +80,9 @@ export class AppComponent implements OnInit {
 
   listenForLoginEvents() {
     this.events.subscribe('user:login', () => {
+      this.userData.getLoggedUserData().then((useradata) => {
+        this.userDetail = useradata
+      })
       this.updateLoggedInStatus(true);
     });
 
@@ -96,13 +97,16 @@ export class AppComponent implements OnInit {
 
   logout() {
     this.userData.logout().then(() => {
-      return this.router.navigateByUrl('/app/tabs/schedule');
+      return this.router.navigateByUrl('/login');
     });
   }
 
   openTutorial() {
-    this.menu.enable(false);
     this.storage.set('ion_did_tutorial', false);
     this.router.navigateByUrl('/tutorial');
+  }
+
+  openAbout() {
+    this.router.navigateByUrl('/about');
   }
 }

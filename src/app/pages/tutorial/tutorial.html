@@ -1,46 +1,48 @@
-<ion-header no-border>
+<ion-header>
   <ion-toolbar>
-    <ion-buttons slot="end">
-      <ion-button color='primary' (click)="startApp()" [hidden]="!showSkip">Skip</ion-button>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
     </ion-buttons>
+    <ion-title>About</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen>
+<ion-content>
   <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager="false">
     <ion-slide>
-      <img src="assets/img/agora-mall.jpg" class="slide-image" />
+      <img src="assets/img/ica-slidebox-img-2.png" class="slide-image" />
       <h2 class="slide-title">
-        Welcome to <b>Agora Mall</b>
+        Welcome to <b>E-Doctor Clinic</b>
       </h2>
       <p>
-        The
-        <b>Agora Mall</b> is a one of the finest and largest mall in Ahmedabad
+        The best way to manage and grow your clinic.An integrated solution designed as it should be. Simple, Intuitive
+        And Stylish.
       </p>
     </ion-slide>
 
     <ion-slide>
-      <img src="assets/img/ica-slidebox-img-2.png" class="slide-image" />
-      <h2 class="slide-title">Agora Mall App</h2>
+      <img src="assets/img/walthrough1.jpg" class="slide-image" />
+      <h2 class="slide-title">E-Doctor Clinic</h2>
       <p>
-        This app will provide a feature for getting rewards points on watching movie ,eating in restuarents,Purchasing
-        Clothes and so on.</p>
+        Detailed medical records that are tailored to every specialty, and allow doctors customization.</p>
     </ion-slide>
 
     <ion-slide>
-      <img src="assets/img/agora3.png" class="slide-image" />
+      <img src="assets/img/walkthrough2.jpg" class="slide-image" />
       <h2 class="slide-title">Why use this app.</h2>
-      <p>This app is all in one app.All the featurs will be provided in this app you can also pay through virtul card
-        using this app and gets rewards points.</p>
+      <p>Reduce waiting time, Manage schedules, patient bookings that are received by phone, or online.</p>
     </ion-slide>
 
     <ion-slide>
-      <img src="assets/img/agora2.png" class="slide-image" />
-      <h2 class="slide-title">Ready to Play?</h2>
-      <ion-button fill="clear" (click)="startApp()">
-        Continue
-        <ion-icon slot="end" name="arrow-forward"></ion-icon>
-      </ion-button>
+      <img src="assets/img/walkthrough4.jpg" class="slide-image" />
+      <h2 class="slide-title">E- Features</h2>
+      <p>Never miss payments from patients, or insurance. The system manages collecetions and claims.</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/walkthrough3.jpg" class="slide-image" />
+      <h2 class="slide-title">Medical Reports</h2>
+      <p>Medical, administrative and financial reporting puts you in control of your clinic.</p>      
     </ion-slide>
   </ion-slides>
 </ion-content>

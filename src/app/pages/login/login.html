@@ -8,7 +8,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding class="transparent-header" [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}"> 
+<ion-content padding class="transparent-header"> 
   <div padding>
     <ion-row>
       <ion-col>
@@ -18,13 +18,11 @@
     <ion-row>
       <ion-col>
         <ion-list inset class="no-border">
-          <ion-item>
-            <ion-label>Username</ion-label>
-            <ion-input type="text"></ion-input>
+          <ion-item>            
+            <ion-input type="text" placeholder="email" [(ngModel)]="email"></ion-input>
           </ion-item>
-          <ion-item>
-            <ion-label>Password</ion-label>
-            <ion-input type="password"></ion-input>
+          <ion-item>            
+            <ion-input type="password" placeholder="password"></ion-input>
           </ion-item>
         </ion-list>
       </ion-col>

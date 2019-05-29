@@ -19,28 +19,12 @@ export class TutorialPage {
     public menu: MenuController,
     public router: Router,
     public storage: Storage
-  ) {}
-
-  startApp() {
-    this.router
-      .navigateByUrl('/app/tabs/schedule')
-      .then(() => this.storage.set('ion_did_tutorial', 'true'));
-  }
+  ) { }
 
   onSlideChangeStart(event) {
     event.target.isEnd().then(isEnd => {
       this.showSkip = !isEnd;
     });
-  }
-
-  ionViewWillEnter() {
-    this.storage.get('ion_did_tutorial').then(res => {
-      if (res === true) {
-        this.router.navigateByUrl('/app/tabs/schedule');
-      }
-    });
-
-    this.menu.enable(false);
   }
 
   ionViewDidLeave() {

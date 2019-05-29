@@ -32,6 +32,10 @@ const routes: Routes = [
     path: 'tutorial',
     loadChildren: './pages/tutorial/tutorial.module#TutorialModule',
     canLoad: [CheckTutorial]
+  },
+  {
+    path: 'about',
+    loadChildren: './pages/about/about.module#AboutModule',    
   }
 ];
 
