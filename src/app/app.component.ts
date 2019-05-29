@@ -91,6 +91,7 @@ export class AppComponent implements OnInit {
     });
 
     this.events.subscribe('user:logout', () => {
+      this.userDetail = null
       this.updateLoggedInStatus(false);
     });
   }
