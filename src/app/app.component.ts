@@ -25,14 +25,14 @@ export class AppComponent implements OnInit {
       icon: 'briefcase'
     },
     {
+      title: 'Reports',
+      url: '/app/tabs/map',
+      icon: 'map'
+    },
+    {
       title: 'Inventory',
       url: '/app/tabs/speakers',
       icon: 'ribbon'
-    },
-    {
-      title: 'Graph',
-      url: '/app/tabs/map',
-      icon: 'map'
     },
   ];
   userDetail: any
