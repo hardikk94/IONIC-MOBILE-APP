@@ -170,28 +170,76 @@
   ],
   "users": [
     {
+      "id":"1",
       "name": "Hardik Kothari",      
       "email": "hardikkothari46@gmail.com",
       "image": "",
-      "type": "patient"
+      "type": "patient",
+      "area":"Platinium Heights,Block-B ,301 3rd Floor",
+      "dateofadmit" :"2019-05-05",
+      "process":"Inprocess",
+      "disease":["Heart","BP"],      
+      "description":"A disease is a particular abnormal condition that negatively affects the structure or function of part or all of an organism, and that is not due to any external injury"
     },
     {
+      "id":"2",
+      "name": "Riddhi Shah",      
+      "email": "riddhishah46@gmail.com",
+      "image": "",
+      "type": "patient",
+      "area":"Platinium Heights,Block-B ,301 3rd Floor",
+      "dateofadmit" :"2019-05-25",
+      "process":"Inprocess",
+      "disease":["Heart","BP"],
+      "description":"A disease is a particular abnormal condition that negatively affects the structure or function of part or all of an organism, and that is not due to any external injury"
+    },
+    {
+      "id":"3",
+      "name": "Hardik Bohra",      
+      "email": "hardikbohra@gmail.com",
+      "image": "",
+      "type": "patient",
+      "area":"Platinium Heights,Block-B ,301 3rd Floor",
+      "dateofadmit" :"2019-03-25",
+      "process":"Inprocess",
+      "disease":["Heart","BP"],
+      "description":"A disease is a particular abnormal condition that negatively affects the structure or function of part or all of an organism, and that is not due to any external injury"
+    },
+    {
+      "id":"4",
       "name": "Dr. Jainesh Shah",
       "email": "jaineshshah@gmaillcom",
       "image": "",
-      "type": "Doctor"
+      "type": "Doctor",
+      "area":"Platinium Heights,Block-B ,301 3rd Floor",
+      "dateofadmit" :"2019-05-05",
+      "process":"Discharged",
+      "disease":["Heart","BP"],
+      "description":"A disease is a particular abnormal condition that negatively affects the structure or function of part or all of an organism, and that is not due to any external injury"
     },
     {
+      "id":"5",
       "name": "Sumit shah",
       "email": "sumit@gmaillcom",
       "image": "",
-      "type": "patient"
+      "type": "patient",
+      "area":"Platinium Heights,Block-B ,301 3rd Floor",
+      "dateofadmit" :"2019-05-05",
+      "process":"ICU",
+      "disease":["Heart","BP"],
+      "description":"A disease is a particular abnormal condition that negatively affects the structure or function of part or all of an organism, and that is not due to any external injury"
     },
     {
+      "id":"6",
       "name": "Kiran Kothari",
       "email": "kirank@gmaillcom",
       "image": "",
-      "type": "patient"
+      "type": "patient",
+      "area":"Platinium Heights,Block-B ,301 3rd Floor",
+      "dateofadmit" :"2019-05-05",
+      "process":"Reports",
+      "disease":["Heart","BP"],
+      "description":"A disease is a particular abnormal condition that negatively affects the structure or function of part or all of an organism, and that is not due to any external injury"
     }
   ],
   "map": [

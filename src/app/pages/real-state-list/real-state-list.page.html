@@ -9,17 +9,18 @@
 
 <ion-content class="outer-content">
   <div class="pins">
-    <ion-card class="pin" *ngFor="let post of posts" routerLink="/app/tabs/realstate/view/{{post.id}}">
-      <img [src]="post.image" />
-      <div *ngIf="post.description" class="post-description">
-        <small><b>{{ post.location }}</b></small><br />
-        <small>{{ post.description }}</small>        
+    <ion-card class="pin" *ngFor="let post of patients" routerLink="/app/tabs/realstate/view/{{post.id}}">
+      <img src="assets/img/user-image.png" />
+      <div class="post-description">
+        <small><b>{{ post.name }}</b></small><br />
+        <small><b>{{ post.dateofadmit }}</b></small><br />
+        <small>{{ post.area }}</small><br />        
       </div>
       <ion-item>
-        <ion-avatar item-start *ngIf="post.booked">
+        <ion-avatar item-start>
           <img src="assets/img/marty-avatar.png">
         </ion-avatar>
-        <small>{{post.booked ? 'Booked' : 'Open'}}</small>        
+        <small>{{post.process}}</small>        
       </ion-item>
     </ion-card>
   </div>

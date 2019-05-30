@@ -15,14 +15,14 @@ import { UserData } from './providers/user-data';
 export class AppComponent implements OnInit {
   appPages = [
     {
-      title: 'Patients',
-      url: '/app/tabs/realstate',
-      icon: 'briefcase'
-    },
-    {
       title: 'Appointments',
       url: '/app/tabs/schedule',
       icon: 'logo-freebsd-devil'
+    },
+    {
+      title: 'Patients',
+      url: '/app/tabs/realstate',
+      icon: 'briefcase'
     },
     {
       title: 'Inventory',
@@ -68,6 +68,7 @@ export class AppComponent implements OnInit {
 
   checkLoginStatus() {
     return this.userData.isLoggedIn().then(loggedIn => {
+      if (!loggedIn) this.router.navigateByUrl('/login');
       return this.updateLoggedInStatus(loggedIn);
     });
   }

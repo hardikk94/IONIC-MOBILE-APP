@@ -17,7 +17,7 @@ export class SchedulePage implements OnInit {
 
   dayIndex = 0;
   queryText = '';
-  segment = 'all';
+  segment = 'today';
   excludeTracks: any = [];
   shownSessions: any = [];
   groups: any = [];

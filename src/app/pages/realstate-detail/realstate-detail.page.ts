@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ConferenceData } from './../../providers/conference-data';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'realstate-detail',
   templateUrl: './realstate-detail.page.html',
@@ -7,34 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RealstateDetailPage implements OnInit {
   defaultHref = '';
-  estateProperty = {
-    name: 'Pretty house',
-    description: `It’s a 2 bedroom, 2 bathroom laneway house that also has a spacious study off the upstairs landing.
-                  Sporting modern finishes and some cute touches like wall niches and bamboo accents,
-                  this laneway house is a great example of what can be built on most of Vancouver’s standard 33 x 122
-                  foot lots.`,
-    price: '850000',
-    image: 'https://www.smallworks.ca/wp-content/uploads/exterior11.jpg',
-    style: 'Modern Interior',
-    size: '33\' Lot',
-    features: [
-      {
-        icon: 'paw',
-        title: 'Pet Friendly'
-      },
-      {
-        icon: 'bicycle',
-        title: 'Bike Stations'
-      },
-      {
-        icon: 'rose',
-        title: 'Beautiful Garden'
-      }
-    ]
-  };
-  constructor() { }
+  patientDetail ={}
+  constructor(public configData: ConferenceData,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    const sessionId = this.route.snapshot.paramMap.get('id')
+    this.configData.getpatientList().subscribe(async (users) => {
+      let index = users.findIndex((user) => user.id === sessionId)
+      if (index !== -1) {
+        this.patientDetail = users[index]                
+      }
+    });
   }
 
   ionViewDidEnter() {

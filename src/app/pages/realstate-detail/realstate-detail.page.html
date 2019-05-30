@@ -3,43 +3,36 @@
     <ion-buttons slot="start">
       <ion-back-button [defaultHref]="defaultHref"></ion-back-button>
     </ion-buttons>
-    <ion-title>View Detail</ion-title>
+    <ion-title>Patient Detail</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <section class="housing-image" [ngStyle]="{ 'background-image': 'url(' + estateProperty.image + ')'}">
+  <section class="housing-image" [ngStyle]="{ 'background-image': 'url(' + 'assets/img/user-image.png' + ')'}">
     <section class="housing-banner" padding>
-      <span class="housing-title">{{estateProperty.name}}</span>
-      <span class="price">{{estateProperty.price | currency:'USD' }}</span>
+      <span class="housing-title">{{patientDetail?.name}}</span>
+      <span>{{patientDetail?.area }}</span>
     </section>
   </section>
   <section class="main-content">
     <ion-grid class="main-features">
       <ion-row>
-        <ion-col text-center *ngFor="let feature of estateProperty.features">
-          <ion-icon [name]="feature.icon"></ion-icon>
-          <span>{{feature.title}}</span>
+        <ion-col text-center *ngFor="let feature of patientDetail?.disease">
+          <ion-icon name="ios-document"></ion-icon>
+          <span>{{feature}}</span>
         </ion-col>
       </ion-row>
     </ion-grid>
     <ion-grid class="listing-details">
       <ion-row>
         <p margin-left margin-right no-margin-top style="text-align: justify">
-          {{estateProperty.description}}
+          {{patientDetail?.description}}
         </p>
-      </ion-row>
-      <ion-row>
+      </ion-row>      
+      <ion-row *ngFor="let a of [1,2,3,4,5,6,7,8,9,10]">
+        <small><b>Treatment #{{a}}</b></small>
         <ion-col>
-          <ion-icon name="home"></ion-icon>{{estateProperty.style}}
-        </ion-col>
-        <ion-col>
-          <ion-icon name="pin"></ion-icon>{{estateProperty.size}}
-        </ion-col>
-      </ion-row>
-      <ion-row *ngFor="let a of [1,1,1,1,1,1,1,1,1,1]">
-        <ion-col>
-          info here
+            Another method is to wrap you in a special cooling blanket and apply ice packs to your groin, neck, back and armpits to lower your temperature. Give you medications to stop your shivering. If treatments to lower your body temperature make you shiver, your doctor may give you a muscle relaxant, such as a benzodiazepine.
         </ion-col>
       </ion-row>
     </ion-grid>
