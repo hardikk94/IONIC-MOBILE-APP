@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.ionicframework.conferenceapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Agora Mall</name>
+    <name>eDoc</name>
     <description>Schedule, speakers, venue.</description>
     <author email="hardikkothari46@gmail.com" href="crosstechnothor.ga">Hardik Kothari</author>
     <content src="index.html" />

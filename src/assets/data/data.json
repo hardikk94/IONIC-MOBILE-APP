@@ -118,50 +118,50 @@
   ],
   "inventories": [
     {
-      "name": "Movies",
-      "profilePic": "/assets/img/movies.jpeg",
+      "name": "Medicine",
+      "profilePic": "/assets/img/pills.png",
       "twitter": "ionicframework",
-      "about": "Burt is a Bear.",
+      "about": "Medicine is the science and practice of establishing the diagnosis, prognosis, treatment, and prevention of disease. Medicine encompasses a variety of health care practices evolved to maintain and restore health by the prevention and treatment of illness.",
       "location": "Everywhere",
       "email": "burt@example.com",
       "phone": "+1-541-754-3010",
       "id": "1"
     },
     {
-      "name": "Restaurents",
-      "profilePic": "/assets/img/restaurents.jpg",
+      "name": "Injections",
+      "profilePic": "/assets/img/injection.jpg",
       "twitter": "ionicframework",
-      "about": "Charlie is a Cheetah.",
+      "about": "Injection is the act of putting a liquid, especially a drug, into a person's body using a needle and a syringe. Injection is a technique for delivering drugs by parenteral administration, that is, administration via a route other than through the digestive tract",
       "location": "Everywhere",
       "email": "charlie@example.com",
       "phone": "+1-541-754-3010",
       "id": "2"
     },
     {
-      "name": "Fashion",
-      "profilePic": "/assets/img/fashion.jpeg",
+      "name": "Medicine",
+      "profilePic": "/assets/img/pills.png",
       "twitter": "ionicframework",
-      "about": "Donald is a Duck.",
+      "about": "Medicine is the science and practice of establishing the diagnosis, prognosis, treatment, and prevention of disease. Medicine encompasses a variety of health care practices evolved to maintain and restore health by the prevention and treatment of illness.",
       "location": "Everywhere",
       "email": "donald@example.com",
       "phone": "+1-541-754-3010",
       "id": "3"
     },
     {
-      "name": "Games",
-      "profilePic": "/assets/img/games.jpg",
+      "name": "Injections",
+      "profilePic": "/assets/img/injection.jpg",
       "twitter": "ionicframework",
-      "about": "Eva is an Eagle.",
+      "about": "Injection is the act of putting a liquid, especially a drug, into a person's body using a needle and a syringe. Injection is a technique for delivering drugs by parenteral administration, that is, administration via a route other than through the digestive tract",
       "location": "Everywhere",
       "email": "eva@example.com",
       "phone": "+1-541-754-3010",
       "id": "4"
     },
     {
-      "name": "Home",
-      "profilePic": "/assets/img/home.jpg",
+      "name": "Medicine",
+      "profilePic": "/assets/img/pills.png",
       "twitter": "ionicframework",
-      "about": "Eva is an Eagle.",
+      "about": "Medicine is the science and practice of establishing the diagnosis, prognosis, treatment, and prevention of disease. Medicine encompasses a variety of health care practices evolved to maintain and restore health by the prevention and treatment of illness.",
       "location": "Everywhere",
       "email": "eva@example.com",
       "phone": "+1-541-754-3010",
@@ -170,76 +170,94 @@
   ],
   "users": [
     {
-      "id":"1",
-      "name": "Hardik Kothari",      
+      "id": "1",
+      "name": "Hardik Kothari",
       "email": "hardikkothari46@gmail.com",
       "image": "",
       "type": "patient",
-      "area":"Platinium Heights,Block-B ,301 3rd Floor",
-      "dateofadmit" :"2019-05-05",
-      "process":"Inprocess",
-      "disease":["Heart","BP"],      
-      "description":"A disease is a particular abnormal condition that negatively affects the structure or function of part or all of an organism, and that is not due to any external injury"
+      "area": "Platinium Heights,Block-B ,301 3rd Floor",
+      "dateofadmit": "2019-05-05",
+      "process": "Inprocess",
+      "disease": [
+        "Heart",
+        "BP"
+      ],
+      "description": "A disease is a particular abnormal condition that negatively affects the structure or function of part or all of an organism, and that is not due to any external injury"
     },
     {
-      "id":"2",
-      "name": "Riddhi Shah",      
+      "id": "2",
+      "name": "Riddhi Shah",
       "email": "riddhishah46@gmail.com",
       "image": "",
       "type": "patient",
-      "area":"Platinium Heights,Block-B ,301 3rd Floor",
-      "dateofadmit" :"2019-05-25",
-      "process":"Inprocess",
-      "disease":["Heart","BP"],
-      "description":"A disease is a particular abnormal condition that negatively affects the structure or function of part or all of an organism, and that is not due to any external injury"
+      "area": "Platinium Heights,Block-B ,301 3rd Floor",
+      "dateofadmit": "2019-05-25",
+      "process": "Inprocess",
+      "disease": [
+        "Heart",
+        "BP"
+      ],
+      "description": "A disease is a particular abnormal condition that negatively affects the structure or function of part or all of an organism, and that is not due to any external injury"
     },
     {
-      "id":"3",
-      "name": "Hardik Bohra",      
+      "id": "3",
+      "name": "Hardik Bohra",
       "email": "hardikbohra@gmail.com",
       "image": "",
       "type": "patient",
-      "area":"Platinium Heights,Block-B ,301 3rd Floor",
-      "dateofadmit" :"2019-03-25",
-      "process":"Inprocess",
-      "disease":["Heart","BP"],
-      "description":"A disease is a particular abnormal condition that negatively affects the structure or function of part or all of an organism, and that is not due to any external injury"
+      "area": "Platinium Heights,Block-B ,301 3rd Floor",
+      "dateofadmit": "2019-03-25",
+      "process": "Inprocess",
+      "disease": [
+        "Heart",
+        "BP"
+      ],
+      "description": "A disease is a particular abnormal condition that negatively affects the structure or function of part or all of an organism, and that is not due to any external injury"
     },
     {
-      "id":"4",
+      "id": "4",
       "name": "Dr. Jainesh Shah",
       "email": "jaineshshah@gmaillcom",
       "image": "",
       "type": "Doctor",
-      "area":"Platinium Heights,Block-B ,301 3rd Floor",
-      "dateofadmit" :"2019-05-05",
-      "process":"Discharged",
-      "disease":["Heart","BP"],
-      "description":"A disease is a particular abnormal condition that negatively affects the structure or function of part or all of an organism, and that is not due to any external injury"
+      "area": "Platinium Heights,Block-B ,301 3rd Floor",
+      "dateofadmit": "2019-05-05",
+      "process": "Discharged",
+      "disease": [
+        "Heart",
+        "BP"
+      ],
+      "description": "A disease is a particular abnormal condition that negatively affects the structure or function of part or all of an organism, and that is not due to any external injury"
     },
     {
-      "id":"5",
+      "id": "5",
       "name": "Sumit shah",
       "email": "sumit@gmaillcom",
       "image": "",
       "type": "patient",
-      "area":"Platinium Heights,Block-B ,301 3rd Floor",
-      "dateofadmit" :"2019-05-05",
-      "process":"ICU",
-      "disease":["Heart","BP"],
-      "description":"A disease is a particular abnormal condition that negatively affects the structure or function of part or all of an organism, and that is not due to any external injury"
+      "area": "Platinium Heights,Block-B ,301 3rd Floor",
+      "dateofadmit": "2019-05-05",
+      "process": "ICU",
+      "disease": [
+        "Heart",
+        "BP"
+      ],
+      "description": "A disease is a particular abnormal condition that negatively affects the structure or function of part or all of an organism, and that is not due to any external injury"
     },
     {
-      "id":"6",
+      "id": "6",
       "name": "Kiran Kothari",
       "email": "kirank@gmaillcom",
       "image": "",
       "type": "patient",
-      "area":"Platinium Heights,Block-B ,301 3rd Floor",
-      "dateofadmit" :"2019-05-05",
-      "process":"Reports",
-      "disease":["Heart","BP"],
-      "description":"A disease is a particular abnormal condition that negatively affects the structure or function of part or all of an organism, and that is not due to any external injury"
+      "area": "Platinium Heights,Block-B ,301 3rd Floor",
+      "dateofadmit": "2019-05-05",
+      "process": "Reports",
+      "disease": [
+        "Heart",
+        "BP"
+      ],
+      "description": "A disease is a particular abnormal condition that negatively affects the structure or function of part or all of an organism, and that is not due to any external injury"
     }
   ],
   "map": [

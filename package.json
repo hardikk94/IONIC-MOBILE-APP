@@ -1,7 +1,7 @@
 {
-  "name": "Agora Mall",
+  "name": "eDoc",
   "version": "0.0.0",
-  "description": "A mall app",
+  "description": "eDoc",
   "license": "Apache-2.0",
   "scripts": {
     "ng": "ng",
