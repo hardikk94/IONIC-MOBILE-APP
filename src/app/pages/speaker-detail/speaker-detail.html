@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/app/tabs/speakers"></ion-back-button>
     </ion-buttons>
-    <ion-title>{{speaker?.name}} Rewards</ion-title>
+    <ion-title>{{inventoryDetail?.name}} Inventory</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,36 +11,36 @@
     <div class="card-profile">
         <div class="card-profile_visual"></div>
         <div class="card-profile_user-infos">
-          <span class="infos_name">{{user.name}}</span>
-          <span class="infos_nick">{{user.twitter}}</span>
+          <span class="infos_name">{{inventoryDetail?.name}}</span>
+          <span class="infos_nick">{{inventoryDetail?.email}}</span>
           <a href="#"></a>
         </div>
         <div class="card-profile_user-stats">
           <div class="stats-holder">
             <div class="user-stats">
-              <strong>Earn Points</strong>
-              <span>{{user.tweets}}</span>
+              <strong>Sold Stock</strong>
+              <span>{{user?.tweets}}</span>
             </div>
             <div class="user-stats">
-              <strong>Expense Points</strong>
-              <span>{{user.following}}</span>
+              <strong>Remaining Stock</strong>
+              <span>{{user?.following}}</span>
             </div>
             <div class="user-stats">
-              <strong>Total Points</strong>
-              <span>{{user.followers}}</span>
+              <strong>Total Stock</strong>
+              <span>{{user?.followers}}</span>
             </div>
           </div>
         </div>
 
         <div id="posts">
-          <ion-card>                          
+          <!-- <ion-card>                          
               <ion-card-content>
                   <ion-card-title>
                       <h5>Virtual Card</h5>
                     </ion-card-title>
                     <img [src]="cardImage" />
               </ion-card-content>
-          </ion-card>
+          </ion-card> -->
           <ion-card *ngFor="let post of posts">
             <ion-item>              
               <h4 class="sticky">{{user.name}}</h4>              

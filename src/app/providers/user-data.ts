@@ -32,10 +32,12 @@ export class UserData {
   }
 
   login(username: string, userdata: any): Promise<any> {
+    console.log(userdata)
     return this.storage.set(this.HAS_LOGGED_IN, true).then(() => {
-      this.setUsername(username);
-      this.storage.set('userdata', userdata);
-      return this.events.publish('user:login');
+      return this.storage.set('userdata', userdata).then(()=>{
+        this.setUsername(username);      
+        this.events.publish('user:login');
+      });            
     });
   }
 
@@ -48,8 +50,9 @@ export class UserData {
 
   logout(): Promise<any> {
     return this.storage.remove(this.HAS_LOGGED_IN).then(() => {
+      this.storage.remove('userdata');
       return this.storage.remove('username');
-      return this.storage.remove('userdata');
+      
     }).then(() => {
       this.events.publish('user:logout');
     });

@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation,OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ConferenceData } from '../../providers/conference-data';
 
@@ -7,12 +7,13 @@ import { ConferenceData } from '../../providers/conference-data';
   templateUrl: 'speaker-detail.html',
   styleUrls: ['./speaker-detail.scss'],
 })
-export class SpeakerDetailPage {
+export class SpeakerDetailPage implements OnInit {
   cardImage = 'assets/img/credit-card.png';
+  inventoryDetail
   posts = [
     {
       postImageUrl: 'assets/img/background/background-2.jpg',
-      text: `Shpping of Shirt and Jeans`,
+      text: `Diliver to appollo hospital`,
       date: 'March 5, 2019',
       likes: 12,
       comments: 4,
@@ -20,7 +21,7 @@ export class SpeakerDetailPage {
     },
     {
       postImageUrl: 'assets/img/background/background-3.jpg',
-      text: 'Wathed movie of Kalank',
+      text: 'Dilivery to Rajasthan hospital',
       date: 'April 17, 2019',
       likes: 30,
       comments: 64,
@@ -30,22 +31,40 @@ export class SpeakerDetailPage {
       postImageUrl: 'assets/img/background/background-4.jpg',
       date: 'January 27, 2019',
       likes: 46,
-      text: `Birthday celebrated in restuarents`,
+      text: `Diliver to Shalby hospital`,
       comments: 66,
       timestamp: '4mo ago'
     },
   ];
 
+  
   user = {
     name: 'Hardik Kothari',
     twitter: '@virtualCard',
     profileImage: '../assets/img/avatar/cosima-avatar.jpg',
-    followers: 456,
-    following: 1052,
-    tweets: 35
+    followers: 2132,
+    following: 1080,
+    tweets: 1052
   };
 
-  constructor() { }
+  constructor(public confData: ConferenceData,private route: ActivatedRoute) { 
+
+  }
+
+  ngOnInit()
+  {
+    const sessionId = this.route.snapshot.paramMap.get('speakerId')
+    this.confData.getSpeakers().subscribe((speakers: any[]) => {     
+      console.log(sessionId)
+      let index = speakers.findIndex((speaker) => speaker.id == sessionId)
+      console.log("index",index)
+      if(index !== -1)
+      {
+        this.inventoryDetail = speakers[index]
+        console.log(this.inventoryDetail)
+      }
+    });
+  }
 
   ionViewDidLoad() {
 

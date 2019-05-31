@@ -81,8 +81,9 @@ export class AppComponent implements OnInit {
 
   listenForLoginEvents() {
     this.events.subscribe('user:login', () => {
-      this.userData.getLoggedUserData().then((useradata) => {
+      this.userData.getLoggedUserData().then((useradata) => {        
         this.userDetail = useradata
+        console.log("logged in",this.userDetail)
       })
       this.updateLoggedInStatus(true);
     });
@@ -92,6 +93,7 @@ export class AppComponent implements OnInit {
     });
 
     this.events.subscribe('user:logout', () => {
+      console.log("log out")
       this.userDetail = null
       this.updateLoggedInStatus(false);
     });
